@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Chat Node</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="marvel-device nexus5 back">
+        <div class="top-bar"></div>
+        <div class="sleep"></div>
+        <div class="volume"></div>
+        <div class="camera"></div>
+        <div class="screen">
+          <div class="screen-container">
+            <div class="status-bar">
+              <div class="time"></div>
+              <div class="battery">
+                <i class="zmdi zmdi-battery"></i>
+              </div>
+              <div class="network">
+                <i class="zmdi zmdi-network"></i>
+              </div>
+              <div class="wifi">
+                <i class="zmdi zmdi-wifi-alt-2"></i>
+              </div>
+              <div class="star">
+                <i class="zmdi zmdi-star"></i>
+              </div>
+            </div>
+            <div class="chat">
+              <div class="chat-container">
+                <div class="user-bar">
+                  <div class="back">
+                    <i class="zmdi zmdi-arrow-left"></i>
+                  </div>
+                  <div class="avatar">
+                    <img
+                      src="https://pbs.twimg.com/profile_images/918106915795763200/Z0QK7_ej.jpg"
+                      alt="Avatar"
+                    />
+                  </div>
+                  <div class="name">
+                    <span>Chusma Ubiqum SOC</span>
+                    <span class="status"></span>
+                  </div>
+                  <div class="actions more">
+                    <i class="zmdi zmdi-more-vert"></i>
+                  </div>
+                  <div class="actions attachment">
+                    <i class="zmdi zmdi-phone"></i>
+                  </div>
+                  <div class="actions">
+                    <img
+                      src="https://i.ibb.co/LdnbHSG/ic-action-videocall.png"
+                    />
+                  </div>
+                </div>
+                <div class="conversation">
+                  <div class="conversation-container user">
+                    <h3>Write your user name</h3>
+                    <input type="name" id="name" />
+                    <button id="enter">Enter</button>
+                  </div>
+                  <div
+                    class="conversation-container noUser"
+                    id="messages"
+                    style="display: none"
+                  ></div>
+                  <div
+                    class="conversation-compose noUser2"
+                    style="display: none"
+                  >
+                    <div class="emoji">
+                      <i class="zmdi zmdi-mood"></i>
+                    </div>
+                    <input
+                      id="message"
+                      class="input-msg"
+                      name="input"
+                      placeholder="Type a mes.."
+                      autocomplete="off"
+                      autofocus
+                    />
+                    <div class="photo">
+                      <img
+                        src="https://i.ibb.co/zNL2yg0/ib-attach.png"
+                        alt=""
+                        width="25"
+                        height="25"
+                      />
+                      <img
+                        src="https://i.ibb.co/vHXYtHF/ib-camera.png"
+                        alt=""
+                        width="25"
+                        height="25"
+                      />
+                    </div>
+                    <button class="send" id="send">
+                      <div class="circle">
+                        <i class="zmdi zmdi-mail-send"></i>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+
+    <script src="front.js"></script>
+  </body>
+</html>
