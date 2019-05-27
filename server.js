@@ -4,6 +4,8 @@ var app = express();
 var server = app.listen(process.env.PORT);
 const path = require("path");
 
+require("dotenv").config();
+
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
@@ -29,7 +31,9 @@ var dbUrl =
   "mongodb+srv://raul:ubiqum2019@mongochat-q3fmc.mongodb.net/test?retryWrites=true";
 
 //Conectamos con la BBDD
-mongoose.connect(dbUrl, { useNewUrlParser: true }, err => {
+console.log(process.env.MONGOURI);
+
+mongoose.connect(process.env.MONGOURI, { useNewUrlParser: true }, err => {
   console.log("mongodb connected");
 });
 
