@@ -1,14 +1,9 @@
+//dotenv es para usar variables globales desde un archivo .env
+require("dotenv").config();
 //Express es un framework web para Node
 var express = require("express");
 var app = express();
 var server = app.listen(process.env.PORT);
-const path = require("path");
-
-require("dotenv").config();
-
-// app.get("/", function(req, res) {
-//   res.sendFile(path.join(__dirname, "index.html"));
-// });
 
 //Estas opciones son requisito para usar los datos en el POST y en el GET.
 //Antes se usaba una librería llamada BodyParser. En la última versión de Express >4.0
