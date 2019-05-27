@@ -1,7 +1,7 @@
 //Express es un framework web para Node
 var express = require("express");
 var app = express();
-var server = app.listen(8081);
+var server = app.listen(process.env.PORT);
 const path = require("path");
 
 app.get("/", function(req, res) {
