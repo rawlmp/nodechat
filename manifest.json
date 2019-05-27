@@ -1,0 +1,6 @@
+{
+  "short_name": "ubiqumChat",
+  "name": "Ubiqum Chat",
+  "start_url": "index.html",
+  "display": "standalone"
+}
