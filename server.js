@@ -1,14 +1,14 @@
 //Express es un framework web para Node
 var express = require("express");
 var app = express();
-var server = app.listen(process.env.PORT);
+var server = app.listen(8081);
 const path = require("path");
 
 require("dotenv").config();
 
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
+// app.get("/", function(req, res) {
+//   res.sendFile(path.join(__dirname, "index.html"));
+// });
 
 //Estas opciones son requisito para usar los datos en el POST y en el GET.
 //Antes se usaba una librería llamada BodyParser. En la última versión de Express >4.0
@@ -31,10 +31,8 @@ var dbUrl =
   "mongodb+srv://raul:ubiqum2019@mongochat-q3fmc.mongodb.net/test?retryWrites=true";
 
 //Conectamos con la BBDD
-console.log(process.env.MONGOURI);
-
 mongoose.connect(process.env.MONGOURI, { useNewUrlParser: true }, err => {
-  console.log("mongodb connected");
+  console.log("mongodb connected in " + process.env.PORT);
 });
 
 //Esquema o modelo del mensaje
