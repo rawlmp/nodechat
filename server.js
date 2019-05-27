@@ -2,6 +2,11 @@
 var express = require("express");
 var app = express();
 var server = app.listen(3000);
+const path = require("path");
+
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
 
 //Estas opciones son requisito para usar los datos en el POST y en el GET.
 //Antes se usaba una librería llamada BodyParser. En la última versión de Express >4.0
