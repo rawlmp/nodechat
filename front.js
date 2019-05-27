@@ -87,13 +87,13 @@ function addMessages(message) {
 }
 
 async function getMessages() {
-  let response = await fetch("http://localhost:3000/messages");
+  let response = await fetch("/messages");
   let data = await response.json();
   data.forEach(addMessages);
 }
 
 function sendMessage(message) {
-  fetch("http://localhost:3000/messages", {
+  fetch("/messages", {
     method: "POST",
     body: JSON.stringify(message),
     headers: {
