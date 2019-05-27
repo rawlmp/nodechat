@@ -1,7 +1,7 @@
 //Express es un framework web para Node
 var express = require("express");
 var app = express();
-var server = app.listen(8081);
+var server = app.listen(3000);
 const path = require("path");
 
 require("dotenv").config();
@@ -31,9 +31,13 @@ var dbUrl =
   "mongodb+srv://raul:ubiqum2019@mongochat-q3fmc.mongodb.net/test?retryWrites=true";
 
 //Conectamos con la BBDD
-mongoose.connect(process.env.MONGOURI, { useNewUrlParser: true }, err => {
-  console.log("mongodb connected in " + process.env.PORT);
-});
+mongoose.connect(
+  "mongodb://herokuuser:heroku2019@ds235708.mlab.com:35708/heroku_l0qdtlhz",
+  { useNewUrlParser: true },
+  err => {
+    console.log("mongodb connected in " + process.env.PORT);
+  }
+);
 
 //Esquema o modelo del mensaje
 var Message = mongoose.model("Message", {
