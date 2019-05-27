@@ -31,7 +31,7 @@ var dbUrl =
   "mongodb+srv://raul:ubiqum2019@mongochat-q3fmc.mongodb.net/test?retryWrites=true";
 
 //Conectamos con la BBDD
-mongoose.connect(process.env.MONGOURI, { useNewUrlParser: true }, err => {
+mongoose.connect(dbUrl, { useNewUrlParser: true }, err => {
   console.log("mongodb connected in " + process.env.PORT);
 });
 
